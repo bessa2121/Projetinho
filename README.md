@@ -1,3 +1,11 @@
+# Projeto Burguesa Point
+Projeto criado para pratica com intuito de simular uma situação profissional...
+Projeto realizado por dois coders
+
+
+
+
+
 # 🍽️ Sistema de Gestão de Restaurante
 
 ## 📌 Descrição
