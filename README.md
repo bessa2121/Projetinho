@@ -1,4 +1,4 @@
-# Projeto Burguesa Point
+# Projeto BurguesaBurguer
 Projeto criado para pratica com intuito de simular uma situação profissional...
 Projeto realizado por dois coders
 
