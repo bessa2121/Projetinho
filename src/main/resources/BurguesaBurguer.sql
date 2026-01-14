@@ -1,0 +1,14 @@
+CREATE DATABASE BurguesaBurguer;
+USE BurguesaBurguer;
+
+CREATE TABLE Registrar (
+ID INT UNIQUE,
+Email Varchar(100) NOT NULL,
+Nome VARCHAR(100) NOT NULL,
+Senha VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE login  (
+email VARCHAR(100) NOT NULL UNIQUE,
+Senha VARCHAR(100) NOT NULL
+);
