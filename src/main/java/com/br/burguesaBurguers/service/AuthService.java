@@ -18,12 +18,15 @@ public class AuthService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public LoginResponseDTO login(LoginRequestDTO dto){
+    public LoginResponseDTO login(LoginRequestDTO dto) {
         User user = userRepository.findByUserEmail(dto.getUserEmail())
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
 
-        if(!passwordEncoder.matches(dto.getPassword(), user.getPassword())) {
+        if (!passwordEncoder.matches(dto.getPassword(), user.getPassword())) {
             throw new RuntimeException("Senha Inválida");
         }
+
+        return new LoginResponseDTO("Login realizado com sucesso");
     }
 }
+
