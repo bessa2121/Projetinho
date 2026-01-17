@@ -7,6 +7,8 @@ import com.br.burguesaBurguers.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AuthService {
 
@@ -26,7 +28,11 @@ public class AuthService {
             throw new RuntimeException("Senha Inválida");
         }
 
-        return new LoginResponseDTO("Login realizado com sucesso");
+        return new LoginResponseDTO(
+                "Login realizado com sucesso",
+                user.getUserName(),
+                user.getUserEmail()
+        );
     }
 }
 

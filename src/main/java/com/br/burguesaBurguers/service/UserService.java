@@ -9,6 +9,8 @@ import jakarta.validation.constraints.Pattern;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -37,6 +39,18 @@ public class UserService {
                 savedUser.getUserName(),
                 savedUser.getUserEmail()
         );
+    }
+
+    public List<UserResponseDTO> listAll(){
+        return userRepository
+                .findAll()
+                .stream()
+                .map(user -> new UserResponseDTO(
+                        user.getId(),
+                        user.getUserName(),
+                        user.getUserEmail()
+                ))
+                .toList();
     }
 }
 

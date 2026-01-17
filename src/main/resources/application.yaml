@@ -1,3 +1,21 @@
 spring:
   application:
     name: burguesaBurguers
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/BurguesaBurguers
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  thymeleaf:
+    cache: false
+
+  sql:
+    init:
+      mode: always
